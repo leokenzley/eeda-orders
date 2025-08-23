@@ -3,7 +3,7 @@ Projeto para estudar python para web e uma arquitetura de eventos com
 
 ![Diagrama](.doc/images/diagram.png)
 
-![alt text](.doc/images/image.png)
+![alt text](.doc/images/rabbitMQ.png)
 
 ### Sobre o projeto:
 - Será utilizado o padrão FIFO (first in first out)
@@ -17,4 +17,9 @@ Projeto para estudar python para web e uma arquitetura de eventos com
 ```
 https://tryrabbitmq.com/
 ```
- 
+### Executando o projeto
+#### RabbitMQ + MongoDB
+```shell
+cd docker/ &&
+docker compose up -d
+``` 

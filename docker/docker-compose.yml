@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  eda-mongodb:
+    image: mongo:latest
+    container_name: eda-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    restart: unless-stopped
+    volumes:
+      - eda-mongodb-data:/data/db
+    networks:
+      - eda-network  
+
+  eda-rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: eda-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    restart: unless-stopped
+    volumes:
+      - eda-rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - eda-network
+
+volumes:
+  eda-mongodb-data:
+    driver: local
+  eda-rabbitmq-data:
+    driver: local
+
+networks:
+  eda-network:
+    driver: bridge
