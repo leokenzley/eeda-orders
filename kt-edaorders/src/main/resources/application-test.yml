@@ -1,0 +1,25 @@
+servlet:
+  port: 8082
+spring:
+  application:
+    name: eda-consumer-create-orders
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: admin
+      password: admin
+      authentication-database: admin
+      database: ordersdb
+
+rabbitmq:
+  consumer:
+    kt-order:
+      queue: create-order-dlq
+      exchange: exg.direct.order
+      routing-key: rk.order.dlq
