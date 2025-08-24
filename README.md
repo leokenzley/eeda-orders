@@ -1,6 +1,13 @@
-# eeda-orders
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9.10-007ACC)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4.4-6DB33F)
+![MongoDB](https://img.shields.io/badge/MongoDB-5.5.1-47A248)
+![Docker](https://img.shields.io/badge/Docker-20.10-blue)
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
 
-Este repositório contém dois projetos integrados para estudo de arquitetura orientada a eventos utilizando Python e Kotlin, RabbitMQ e MongoDB.
+# EDA-Orders
+
+Este repositório contém dois projetos integrados para estudo de arquitetura orientada a eventos utilizando Python e Kotlin, RabbitMQ e MongoDB utilizando alguns padrões de projeto como Strategy.
 
 ## Estrutura dos Projetos
 
